@@ -1,7 +1,7 @@
 let express =  require('express');
 let app = express();
 
-let port = process.nv.port || 3000 ;
+let port = process.env.port || 3000 ;
 
 app.set('view engne','ejs');
 
