@@ -5,6 +5,10 @@ let port = process.env.port || 3000;
 
 app.set('view engine', 'ejs');  // Fixed typo here
 
+app.get('/', (req, res) => {
+    res.render('Home');
+});
+
 app.get('/K', (req, res) => {
     res.render('K');
 });
@@ -24,3 +28,4 @@ app.get('/ET', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);  // Corrected string interpolation
 });
+
