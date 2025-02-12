@@ -5,7 +5,7 @@ let port = process.env.port || 3000;
 
 app.set('view engine', 'ejs');  // Fixed typo here
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home');
 });
 
