@@ -26,25 +26,23 @@
             max-width: 600px;
             padding: 40px;
             text-align: center;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
 
         .profile-container:hover {
             transform: scale(1.02);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
 
         .avatar {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background-image: url('https://link-to-avatar-image.com/avatar.jpg');
+            background-image: url('Punich.png'); /* ใช้รูป Punich.png */
             background-size: cover;
             background-position: center;
             margin: 0 auto 20px;
             border: 4px solid #4CAF50;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            transition: background-image 0.5s ease;
         }
 
         h1 {
@@ -52,14 +50,12 @@
             color: #333;
             margin-bottom: 10px;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
 
         .profile-info {
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-bottom: 15px;
             color: #333;
-            transition: color 0.3s ease;
         }
 
         .stats {
@@ -77,11 +73,6 @@
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-5px);
         }
 
         .file-input {
@@ -93,7 +84,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
         .file-input:hover {
@@ -111,15 +101,6 @@
             justify-content: center;
             align-items: center;
             z-index: 999;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .popup.show {
-            display: flex;
-            opacity: 1;
-            pointer-events: all;
         }
 
         .popup-content {
@@ -127,7 +108,6 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
         }
 
         .close-btn {
@@ -138,7 +118,6 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
-            transition: background-color 0.3s ease;
         }
 
         .close-btn:hover {
@@ -191,7 +170,7 @@
                 
                 if (pPressCount === 5) {
                     if (!popupVisible) {
-                        document.getElementById('popup').classList.add('show');
+                        document.getElementById('popup').style.display = 'flex';
                         popupVisible = true;
                     }
                     clearTimeout(timer);
@@ -248,7 +227,7 @@
 
         // ฟังก์ชันปิดป็อปอัพ
         function closePopup() {
-            document.getElementById('popup').classList.remove('show');
+            document.getElementById('popup').style.display = 'none';
             popupVisible = false;
         }
     </script>
