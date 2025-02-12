@@ -6,11 +6,23 @@ let port = process.env.port || 3000;
 app.set('view engine', 'ejs');  // Fixed typo here
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('Home');
 });
 
-app.get('/about', (req, res) => {
-    res.render('about');
+app.get('/ket', (req, res) => {
+    res.render('Ket');
+});
+
+app.get('/non', (req, res) => {
+    res.render('Non');
+});
+
+app.get('/te', (req, res) => {
+    res.render('Hong Te');
+});
+
+app.get('/earth', (req, res) => {
+    res.render('Earth');
 });
 
 app.listen(port, () => {
